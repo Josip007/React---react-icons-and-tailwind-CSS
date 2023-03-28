@@ -1,35 +1,27 @@
-import { GoBell, GoCloudDownload, GoDatabase } from 'react-icons/go';
-import Button from "./Button";
+import Accordion from "./components/Accordion";
+
 
 function App() {
-  function handleEvents () {
-    console.log('Click!')
-  }
+  const items = [
+    {
+      id: 'jedan',
+      label: 'Can i use React on a project',
+      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+    },
+    {
+      id: 'dva',
+      label: 'Can i use Javascript on a project',
+      content: 'You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want. You can use Javascript on any project you want.'
+    },
+    {
+      id: 'tres',
+      label: 'Can i use CSS on a project',
+      content: 'You can use CSS on any project you want. You can use CSS on any project you want. You can use CSS on any project you want.'
+    },
+  ];
 
-  return ( 
-    <div>
-      <div>
-        <Button className='mb-5' secondary outline rounded onClick={handleEvents}>
-          <GoBell />
-          Click</Button>
-      </div>
-      <div>
-        <Button className='mb-5' danger outline onMouseEnter={handleEvents}>
-          <GoCloudDownload />
-          Press</Button>
-      </div>
-      <div>
-        <Button className='mb-5' warning>
-          <GoDatabase />
-          Handle</Button>
-      </div>
-      <div>
-        <Button className='mb-5' secondary outline>hide ads</Button>
-      </div>
-      <div>
-        <Button primary rounded>Something</Button>
-      </div>
-    </div>
+  return (
+    <Accordion items={items}/>
   );
 }
 
