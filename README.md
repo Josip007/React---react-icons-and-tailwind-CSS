@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+React app that contains sidebar with six different components. Each component have some unique properties, like Counter for example, it uses useReducer hook, Dropdown contains function onClick to expand or close dropdown etc.
+
 ## Available Scripts
 
 In the project directory, you can run:
